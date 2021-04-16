@@ -7,10 +7,10 @@
 set timeout -1
 
 # Root Password
-set Password "Secret123"
+set Password "B3j1j0n9"
 
 set ISO "alpine-virt-3.12.3-x86_64.iso"
-set URL "http://dl-cdn.alpinelinux.org/alpine/v3.12/releases/x86_64"
+set URL "http://dl-cdn.alpinelinux.org/alpine/v3.12/releases/x86_64/alpine-virt-3.12.3-x86_64.iso"
 
 spawn curl -v -L -o $ISO -C - $URL/$ISO
 expect "left intact"

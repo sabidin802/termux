@@ -15,13 +15,6 @@ set URL "http://dl-cdn.alpinelinux.org/alpine/v3.12/releases/x86_64/alpine-virt-
 spawn curl -v -L -o $ISO -C - $URL/$ISO
 expect "left intact"
 
-spawn rm -f ./qemukey ./qemukey.pub
-sleep 5
-spawn ssh-keygen -b 2048 -t rsa -N "" -f ./qemukey
-
-expect "\[SHA256\]"
-
-set qemukey [exec cat ./qemukey.pub]
 
 #
 # install the system
